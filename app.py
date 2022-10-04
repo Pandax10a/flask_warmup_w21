@@ -13,6 +13,8 @@ def all_books():
     if(type(result) == list):
         book_json = json.dumps(result, default=str)
         return book_json
+    else:
+        return "error, error, error"
 
 @app.get('/api/books_authored')
 
@@ -21,7 +23,8 @@ def book_count():
     if(type(result) == list):
         book_json = json.dumps(result, default=str)
         return book_json
-
+    else:
+        return "error, error, error"
 @app.get('/api/best_selling_book')
 
 def best_selling():
@@ -29,6 +32,8 @@ def best_selling():
     if(type(result) == list):
         book_json = json.dumps(result, default=str)
         return book_json
+    else:
+        return "error, error, error"
 @app.get('/api/best_selling_author')
 
 def best_selling_author():
@@ -36,6 +41,8 @@ def best_selling_author():
     if(type(result) == list):
         book_json = json.dumps(result, default=str)
         return book_json
+    else:
+        return "error, error, error"
 
 
 app.run(debug=True)
